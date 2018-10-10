@@ -108,7 +108,7 @@ android {
   compileSdkVersion 27
 
   defaultConfig {
-    applicationId "com.invertase.rnfirebasestarter"
+    applicationId "com.raccoon.brdoc"
     minSdkVersion 18
     targetSdkVersion 27
     versionCode 1
@@ -153,9 +153,14 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-fbsdk')
+    compile project(':react-native-vector-icons')
+    compile project(':react-native-firebase')
   implementation(project(':react-native-firebase')) {
     transitive = false
   }
+  implementation 'com.facebook.android:facebook-android-sdk:4.34.0'
+  implementation project(':react-native-fbsdk')
 
   implementation('com.crashlytics.sdk.android:crashlytics:2.9.3@aar') {
     transitive = true
@@ -184,6 +189,8 @@ dependencies {
 
   implementation fileTree(dir: "libs", include: ["*.jar"])
   implementation "com.facebook.react:react-native:+"  // From node_modules
+
+  implementation 'com.google.firebase:firebase-core:16.0.1'
 }
 
 // Run this once to be able to run the application with BUCK

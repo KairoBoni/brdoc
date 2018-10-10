@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">RNFirebaseStarter</string>
+    <string name="app_name">brdoc</string>
+    <string name="facebook_app_id">724059034595650</string>
 </resources>

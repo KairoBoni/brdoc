@@ -1,5 +1,5 @@
 {
-  "name": "RNFirebaseStarter",
+  "name": "brdoc",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -22,8 +22,17 @@
   },
   "dependencies": {
     "fbjs": "^0.8.17",
-    "react": "^16.3.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-native": "^0.55.3",
-    "react-native-firebase": "^4.3.6"
+    "react-native-fbsdk": "^0.8.0",
+    "react-native-firebase": "^4.3.6",
+    "react-native-geocoding": "^0.3.0",
+    "react-native-numeric-input": "^1.5.0",
+    "react-native-vector-icons": "^5.0.0",
+    "react-navigation": "^2.17.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6"
   }
 }

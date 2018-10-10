@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "771187144393",
+    "firebase_url": "https://brdoc-b3d40.firebaseio.com",
+    "project_id": "brdoc-b3d40",
+    "storage_bucket": "brdoc-b3d40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771187144393:android:83fd36c66dc22e51",
+        "android_client_info": {
+          "package_name": "com.raccoon.brdoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771187144393-eecdo5j3u87api83frcpc6nenp83lf86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA52Q29OfGF-XJddWQ43QFI-3d1o8X10CA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
