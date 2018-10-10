@@ -17,3 +17,9 @@ export const registerPress = () => {
         type: "REGISTER",
     }
 }
+
+export const onBackRegisterPress = () => {
+    return {
+        type: "BACK_REGISTER",
+    }
+}

@@ -1,11 +1,22 @@
 import React from 'react';
-import { Text, View, TextInput, Button, Image } from 'react-native';
+import {
+  Text,
+  View,
+  TextInput,
+  Button,
+  Image
+} from 'react-native';
 import { stylesConteiner } from '../styles/conteiner_styles';
 import { stylesLogin } from '../styles/login_styles';
 import Search from './Search';
 import Register from './Register';
 import { connect } from 'react-redux';
-import { tryLogEmail, tryLogFB, registerPress } from '../action/LoginAction'
+import {
+  tryLogEmail,
+  tryLogFB,
+  registerPress,
+  onBackRegisterPress
+} from '../action/LoginAction'
 
 const logoSrc = "../../images/logo.jpg";
 
@@ -17,6 +28,13 @@ class Login extends React.Component {
     loginFB: false,
     user: null,
     isAutenticate: false,
+  }
+
+
+  onBackRegistry = () => {
+    this.setState({
+
+    })
   }
 
   login = async () => {
@@ -57,7 +75,7 @@ class Login extends React.Component {
     if (this.state.isAutenticate) {
       return (<Search user={this.state.user} />);
     } else if (this.props.login.toRegister) {
-      return (<Register />);
+      return (<Register onBackPress={this.props.onBackRegisterPress}/>);
     } else {
       return (
         <View style={stylesConteiner.container}>
@@ -129,6 +147,10 @@ const mapDispatchToProps = (dispatch) => {
 
     registerPress: () => {
       dispatch(registerPress())
+    },
+
+    onBackRegisterPress: () => {
+      dispatch(onBackRegisterPress())
     },
   }
 }

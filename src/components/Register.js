@@ -3,8 +3,13 @@ import { Text, View, TextInput, Button } from 'react-native';
 import firebase from 'react-native-firebase';
 import Login from './Login';
 import { stylesRegister } from '../styles/register_styles'
+import PropTypes from 'prop-types';
 
 export default class App extends React.Component {
+    static propTypes = {
+        onBackPress: PropTypes.func.isRequired,
+      };
+    
     state = {
         user: "",
         passw: "",
@@ -34,6 +39,7 @@ export default class App extends React.Component {
         } else {
             return (
                 <View style={stylesRegister.base}>
+                    <Button onPress={this.props.onBackPress} title={"Voltar"}/>
                     <Text style={stylesRegister.registroText} >Registro</Text>
                     <View>
                         <Text>E-mail</Text>
@@ -67,6 +73,7 @@ export default class App extends React.Component {
                     <Button
                         title={"Registrar"}
                         onPress={this.registry}
+
                     />
                 </View>
             );

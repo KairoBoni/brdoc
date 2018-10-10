@@ -75,6 +75,13 @@ const LoginReducer = (state = initialState, action) => {
                 ...state,
                 toRegister: true,
             }
+            break;
+
+        case "BACK_REGISTER":
+            state = {
+                ...state,
+                toRegister: false
+            }
     };
     return state;
 }
