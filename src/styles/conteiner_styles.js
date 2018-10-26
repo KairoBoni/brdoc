@@ -7,7 +7,7 @@ export const stylesConteiner = StyleSheet.create({
 
   containerSearch: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
     marginTop: 5,
     marginBottom: 5,
     marginLeft: 5,

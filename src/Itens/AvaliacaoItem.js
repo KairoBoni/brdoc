@@ -9,13 +9,16 @@ class AvaliacaoItem extends React.Component {
 
   render() {
     const { avaliacao } = this.props.avaliacao;
-    console.log("Passou flatList");
     return (
-      <View style={styles.avaliacao} key={Math.random()}>
-        <Text>Usuario: {avaliacao.user}</Text>
-        <Text>Data: {avaliacao.time}</Text>
-        <Text>Nota: {avaliacao.nota}</Text>
-        <Text>{avaliacao.comentario}</Text>
+      <View style={[styles.avaliacao,
+      avaliacao.nota >= 4 && { backgroundColor: 'rgba(60,255,22,0.4)' },
+      (avaliacao.nota >= 3 && avaliacao.nota < 4) && { backgroundColor: 'rgba(66,134,244,0.4)' },
+      avaliacao.nota < 3 && { backgroundColor: 'rgba(255,22,22,0.4)' }]
+      } key={Math.random()}>
+        <Text style={styles.textStyle} >Usuario: {avaliacao.user}</Text>
+        <Text style={styles.textStyle}>Data: {avaliacao.time}</Text>
+        <Text style={styles.textStyle}>Nota: {avaliacao.nota}</Text>
+        <Text style={styles.textStyle}>{avaliacao.comentario}</Text>
       </View>
     );
   }
@@ -23,8 +26,19 @@ class AvaliacaoItem extends React.Component {
 
 const styles = StyleSheet.create({
   avaliacao: {
-    alignItems: 'center',
-    borderBottomWidth: 1,
+    flex: 1,
+    borderRadius: 10,
+    backgroundColor: "rgba(66,134,244,0.4)",
+    flexDirection: 'column',
+    justifyContent: "space-around",
+    margin: 5,
+  },
+
+  textStyle: {
+    margin: 4,
+    color: "white",
+    fontSize: 18,
+    textAlign: "center",
   },
 });
 

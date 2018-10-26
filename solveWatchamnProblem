@@ -7,3 +7,11 @@ adb reverse tcp:8081 tcp:8081
 
 path this.props.user._auth._user._user.email
 path this.props.user.user._auth._user._user.email
+
+
+
+this.props.navigation.state.params.user.additionalUserInfo.profile.email
+this.props.navigation.state.params.user.additionalUserInfo.profile.name
+this.props.navigation.state.params.user.additionalUserInfo.profile.picture.data.url
+
+this.props.navigation.state.params.user.additionalUserInfo.providerId

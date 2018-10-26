@@ -16,9 +16,9 @@ const config = {
 
 }
 
-const tryLogEmail = (usr, pass) => {
+const tryLogEmail = async (usr, pass) => {
     if (usr !== "" && pass !== "") {
-        const user = firebase.auth().signInAndRetrieveDataWithEmailAndPassword(usr, pass).catch(
+        const user = await firebase.auth().signInAndRetrieveDataWithEmailAndPassword(usr, pass).catch(
             function (error) {
                 // Handle Errors here.
                 const errorCode = error.code;
@@ -60,6 +60,8 @@ const LoginReducer = (state = initialState, action) => {
                 ...state,
                 user: user,
             }
+
+            console.log(user);
             break;
 
         case "LOGON_FB":
@@ -69,19 +71,6 @@ const LoginReducer = (state = initialState, action) => {
                 user: user,
             }
             break;
-
-        case "REGISTER":
-            state = {
-                ...state,
-                toRegister: true,
-            }
-            break;
-
-        case "BACK_REGISTER":
-            state = {
-                ...state,
-                toRegister: false
-            }
     };
     return state;
 }

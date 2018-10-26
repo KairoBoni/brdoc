@@ -1,65 +1,61 @@
 import { StyleSheet } from 'react-native';
 
 export const stylesDoctor = StyleSheet.create({
-  conteinerDoc: {
-    flex: 1
+  conteiner: {
+    height: "100%",
+    width: "100%",
+
   },
 
-
-  status: {
-    flexDirection: 'row',
-    borderWidth: 1,
-    flexWrap: 'wrap',
-    borderRadius: 20,
-    marginTop: 5,
-    marginBottom: 5,
-    marginLeft: 5,
-    marginRight: 5,
-    height: 200,
-    justifyContent: 'space-around',
-    height: 145,
-  },
-
-  cometarios: {
-    borderWidth: 1,
-    borderRadius: 20,
-    marginTop: 5,
-    marginBottom: 10,
-    marginLeft: 5,
-    marginRight: 5,
-    flex: 1,
-  },
-
-  statusText: {
+  conteinerAddComent: {
+    height: "100%",
+    width: "100%",
     alignItems: "center",
-    marginTop: 5,
-    marginBottom: 5,
+    justifyContent: "space-around"
   },
 
-  add: {
-    borderRadius: 20,
-    marginTop: 5,
-    marginBottom: 5,
-    marginLeft: 5,
-    marginRight: 5,
+  viewPicker: {
+    width: "75%",
+    height: 60,
     borderWidth: 1,
+    borderRadius: 100,
+    borderColor: "white",
+    margin: 4,
   },
 
-  addCom: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-evenly',
+  pickerStyle: {
+    margin: 4,
+    color: "white",
   },
 
-  textCom: {
-    width: 200,
-  },
-
-  textComentario: {
+  textInput: {
+    width: "75%",
+    height: 150,
+    borderRadius: 100,
+    borderColor: "white",
+    backgroundColor: "rgba(66,134,244,0.4)",
+    color: "white",
     fontSize: 20,
-    fontWeight: "bold",
     textAlign: "center",
-    borderBottomWidth: 1,
-  }
+    margin: 4,
+    marginTop: 15,
+  },
+
+  buttonComment: {
+    margin: 4,
+    justifyContent: "center",
+    width: "60%",
+    height: 60,
+    borderRadius: 100,
+    backgroundColor: "rgba(46,100,254,1)",
+    marginTop: 20,
+  },
+
+  textStyle: {
+    margin: 4,
+    color: "white",
+    fontSize: 20,
+    textAlign: "center",
+  },
 
 });

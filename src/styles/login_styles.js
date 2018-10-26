@@ -1,27 +1,90 @@
 import { StyleSheet } from 'react-native';
 
 export const stylesLogin = StyleSheet.create({
-  base: {
-    flex: 1,
-    alignItems: 'center',
+  conteiner: {
+    height: "100%",
+    width: "100%",
+
+  },
+
+  viewConteiner: {
+    alignItems: "center",
     justifyContent: 'space-around',
+    height: "80%",
   },
 
-  logoImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 100
+  viewButton: {
+    width: "100%",
+    justifyContent: "center",
+    flexDirection: 'row',
+    
   },
 
-  inputStyle: {
-    width: 250
+
+  textInput: {
+    width: "75%",
+    height: 60,
+    borderWidth: 1,
+    borderRadius: 100,
+    borderColor: "white",
+
+    color: "white",
+    fontSize: 20,
+    textAlign: "center",
+    margin: 4,
   },
 
-  facebookButton: {
-    color: 'white',
-    padding: 20,
+  buttonLogin: {
+    margin: 4,
+    justifyContent: "center",
+    width: "60%",
+    height: 60,
+    borderRadius: 100,
+    backgroundColor: "#82E0AA",
+    marginTop: 20,
+  },
+
+  buttonLoginFb: {
+    margin: 4,
+    justifyContent: "center",
+    width: "15%",
+    height: 60,
+    borderRadius: 100,
+    backgroundColor: "#3b5998",
+    marginTop: 20,
+  },
+
+  textStyle: {
+    margin: 4,
+    color: "white",
+    fontSize: 20,
+    textAlign: "center",
+  },
+
+  textTitle: {
+    color: "white",
     fontSize: 30,
-    width: 50,
-    textAlign: 'center',
+    fontStyle: "italic",
+  },
+
+  viewRegistry: {
+    margin: 4,
+    width: "60%",
+    justifyContent: "space-around",
+    flexDirection: 'row',
+  },
+
+  textRegistry: {
+    margin: 4,
+    color: "white",
+    textAlign: "center",
+  },
+
+  textStyleFb: {
+    margin: 4,
+    color: "white",
+    fontSize: 20,
+    textAlign: "center",
+    fontWeight: "bold"
   }
 });

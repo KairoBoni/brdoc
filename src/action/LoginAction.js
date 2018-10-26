@@ -11,15 +11,3 @@ export const tryLogFB = () => {
         type: "LOGON_FB",
     }
 }
-
-export const registerPress = () => {
-    return {
-        type: "REGISTER",
-    }
-}
-
-export const onBackRegisterPress = () => {
-    return {
-        type: "BACK_REGISTER",
-    }
-}
