@@ -77,4 +77,11 @@ export const stylesSearch = StyleSheet.create({
         backgroundColor: "rgba(255,22,22,1)",
         marginTop: 20,
     },
+
+    textRegistry: {
+        margin: 4,
+        color: "black",
+        textAlign: "center",
+      },
+    
 });
