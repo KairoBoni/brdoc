@@ -78,8 +78,15 @@ class Search extends React.Component {
 
     showMore = () => {
         let limit = this.state.showLimit + 3
-        ref = firebase.firestore().collection("docs").orderBy("nota", "desc").limit(limit);
-        this.getData(ref);
+        let filter = this.props.navigation.state.params.filterState;
+        if (filter) {
+            let ref = firebase.firestore().collection("docs").orderBy("nota", "desc").limit(limit)
+                .where('nota', '>=', parseInt(filter.notaMinima));
+            this.getData(ref, filter);
+        }  else {
+            ref = firebase.firestore().collection("docs").orderBy("nota", "desc").limit(limit);
+            this.getData(ref);
+        }
         this.setState({
           showLimit: limit
         })
